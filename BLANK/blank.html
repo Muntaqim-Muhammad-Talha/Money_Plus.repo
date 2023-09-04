@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money++</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+        }
+
+        header>h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        .first-top {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .box {
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .depo-box {
+            background-color: rgb(40, 194, 109);
+        }
+
+        .with-box {
+            background-color: rgb(228, 165, 47);
+        }
+
+        .balance-box {
+            background-color: rgb(238, 86, 39);
+        }
+
+        .second-bottonm {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            text-align: center;
+            margin-top: 50px;
+            padding: 15px;
+        }
+
+        .depo-in {
+            background-color: rgb(47, 192, 250);
+            color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            line-height: 32px;
+        }
+
+        .with-in {
+            background-color: rgb(248, 103, 152);
+            color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            line-height: 32px;
+        }
+
+        .sc input {
+            width: 200px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            padding: 8px;
+        }
+
+        .btn-depo {
+            border: none;
+            outline: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .btn-with {
+            border: none;
+            outline: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .btn-depo:active{
+            background-color: antiquewhite;
+        }
+        .btn-with:active{
+            background-color: antiquewhite;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+            header>h1 {
+                text-align: center;
+            }
+
+            .first-top {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0;
+            }
+
+            .second-bottonm {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to <span style="color: rgb(36, 236, 113);">Money++</span></h1>
+    </header>
+    <main>
+        <div class="box-con">
+            <div class="first-top">
+                <div class="depo-box box">
+                    <h2>Deposit</h2>
+                    <h1><span id="depo-span">00</span>$</h1>
+                </div>
+                <div class="with-box box">
+                    <h2>Withdraw</h2>
+                    <h1><span id="with-span">00</span>$</h1>
+                </div>
+                <div class="balance-box box">
+                    <h2>Balance</h2>
+                    <h1><span id="balance-span">45000</span>$</h1>
+                </div>
+            </div>
+            <div class="second-bottonm">
+                <div class="depo-in sc">
+                    <h1>Deposit</h1>
+                    <input id="input-depo" type="text" placeholder="Deposit your $amount">
+                    <br>
+                    <button id="btnDepo" class="btn-depo">Deposit</button>
+                </div>
+                <div class="with-in sc">
+                    <h1>Withdraw</h1>
+                    <input id="input-with" type="text" placeholder="Withdraw your $amount">
+                    <br>
+                    <button id="btn-withdraw" class="btn-with">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="bank.js"></script>
+</body>
+
+</html>
